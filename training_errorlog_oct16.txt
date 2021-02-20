@@ -1,0 +1,121 @@
+
+(mask_rcnn) C:\project_data\interiors_2>python interiors_maskrcnn_2.py train
+2020-10-16 14:43:40.379664: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cudart64_101.dll
+command:  train
+model:  None
+dataset:  C:\project_data\interiors_2\coco_annots\ten_parts\part1
+logs:  C:\project_data\interiors_2\train_logs
+limit:  20
+2020-10-16 14:43:46.935236: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library nvcuda.dll
+2020-10-16 14:43:47.076019: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties:
+pciBusID: 0000:0b:00.0 name: Tesla K80 computeCapability: 3.7
+coreClock: 0.8235GHz coreCount: 13 deviceMemorySize: 11.18GiB deviceMemoryBandwidth: 223.96GiB/s
+2020-10-16 14:43:47.077089: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 1 with properties:
+pciBusID: 0000:0c:00.0 name: Tesla K80 computeCapability: 3.7
+coreClock: 0.8235GHz coreCount: 13 deviceMemorySize: 11.18GiB deviceMemoryBandwidth: 223.96GiB/s
+2020-10-16 14:43:47.077185: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cudart64_101.dll
+2020-10-16 14:43:47.084889: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cublas64_10.dll
+2020-10-16 14:43:47.088600: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cufft64_10.dll
+2020-10-16 14:43:47.090651: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library curand64_10.dll
+2020-10-16 14:43:47.096194: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cusolver64_10.dll
+2020-10-16 14:43:47.100413: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cusparse64_10.dll
+2020-10-16 14:43:47.115463: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cudnn64_7.dll
+2020-10-16 14:43:47.119375: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0, 1
+loading annotations into memory...
+Done (t=0.17s)
+creating index...
+index created!
+loading annotations into memory...
+Done (t=0.04s)
+creating index...
+index created!
+
+
+Training network heads
+
+
+
+Starting at epoch 0. LR=0.001
+
+Checkpoint Path: C:\project_data\interiors_2\train_logs\jash's coco config20201016T1443\mask_rcnn_jash's coco config_{epoch:04d}.h5
+Selecting layers to train
+fpn_c5p5               (Conv2D)
+fpn_c4p4               (Conv2D)
+fpn_c3p3               (Conv2D)
+fpn_c2p2               (Conv2D)
+fpn_p5                 (Conv2D)
+fpn_p2                 (Conv2D)
+fpn_p3                 (Conv2D)
+fpn_p4                 (Conv2D)
+rpn_model              (Functional)
+mrcnn_mask_conv1       (TimeDistributed)
+mrcnn_mask_bn1         (TimeDistributed)
+mrcnn_mask_conv2       (TimeDistributed)
+mrcnn_mask_bn2         (TimeDistributed)
+mrcnn_class_conv1      (TimeDistributed)
+mrcnn_class_bn1        (TimeDistributed)
+mrcnn_mask_conv3       (TimeDistributed)
+mrcnn_mask_bn3         (TimeDistributed)
+mrcnn_class_conv2      (TimeDistributed)
+mrcnn_class_bn2        (TimeDistributed)
+mrcnn_mask_conv4       (TimeDistributed)
+mrcnn_mask_bn4         (TimeDistributed)
+mrcnn_bbox_fc          (TimeDistributed)
+mrcnn_mask_deconv      (TimeDistributed)
+mrcnn_class_logits     (TimeDistributed)
+mrcnn_mask             (TimeDistributed)
+2020-10-16 14:43:52.263571: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2020-10-16 14:43:52.274003: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x2823e1cc880 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-10-16 14:43:52.274122: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-10-16 14:43:52.342913: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties:
+pciBusID: 0000:0b:00.0 name: Tesla K80 computeCapability: 3.7
+coreClock: 0.8235GHz coreCount: 13 deviceMemorySize: 11.18GiB deviceMemoryBandwidth: 223.96GiB/s
+2020-10-16 14:43:52.343987: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 1 with properties:
+pciBusID: 0000:0c:00.0 name: Tesla K80 computeCapability: 3.7
+coreClock: 0.8235GHz coreCount: 13 deviceMemorySize: 11.18GiB deviceMemoryBandwidth: 223.96GiB/s
+2020-10-16 14:43:52.344119: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cudart64_101.dll
+2020-10-16 14:43:52.344168: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cublas64_10.dll
+2020-10-16 14:43:52.344212: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cufft64_10.dll
+2020-10-16 14:43:52.344260: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library curand64_10.dll
+2020-10-16 14:43:52.344305: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cusolver64_10.dll
+2020-10-16 14:43:52.344349: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cusparse64_10.dll
+2020-10-16 14:43:52.344391: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cudnn64_7.dll
+2020-10-16 14:43:52.347823: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0, 1
+2020-10-16 14:43:53.093944: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1257] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-16 14:43:53.094307: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1263]      0 1
+2020-10-16 14:43:53.094488: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1276] 0:   N Y
+2020-10-16 14:43:53.094525: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1276] 1:   Y N
+2020-10-16 14:43:53.098301: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1402] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10636 MB memory) -> physical GPU (device: 0, name: Tesla K80, pci bus id: 0000:0b:00.0, compute capability: 3.7)
+2020-10-16 14:43:53.103003: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1402] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 10636 MB memory) -> physical GPU (device: 1, name: Tesla K80, pci bus id: 0000:0c:00.0, compute capability: 3.7)
+2020-10-16 14:43:53.106874: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x2828ef36600 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2020-10-16 14:43:53.106978: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla K80, Compute Capability 3.7
+2020-10-16 14:43:53.107020: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (1): Tesla K80, Compute Capability 3.7
+Epoch 1/40
+C:\Users\Jashua\.conda\envs\mask_rcnn\lib\site-packages\tensorflow\python\framework\indexed_slices.py:433: UserWarning: Converting sparse IndexedSlices to a dense Tensor of unknown shape. This may consume a large amount of memory.
+  "Converting sparse IndexedSlices to a dense Tensor of unknown shape. "
+2020-10-16 15:12:11.410198: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cublas64_10.dll
+2020-10-16 15:12:11.960490: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cudnn64_7.dll
+2020-10-16 15:12:12.448035: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Internal: Invoking GPU asm compilation is supported on Cuda non-Windows platforms only
+Relying on driver to perform ptx compilation.
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2020-10-16 15:12:27.680389: W tensorflow/core/common_runtime/bfc_allocator.cc:246] Allocator (GPU_0_bfc) ran out of memory trying to allocate 3.15GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2020-10-16 15:12:27.922752: W tensorflow/core/common_runtime/bfc_allocator.cc:246] Allocator (GPU_0_bfc) ran out of memory trying to allocate 3.05GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+   1/1000 [..............................] - ETA: 0s - batch: 0.0000e+00 - size: 4.0000 - loss: 47.3503 - rpn_class_loss: 18.5286 - rpn_bbox_loss: 5.2345 - mrcnn_class_loss: 16.6820 - mrcnn_bbox_loss: 5.5389 - mrcnn_mask_loss: 1.36622020-10-16 15:39:15.745917: I tensorflow/core/profiler/lib/profiler_session.cc:164] Profiler session started.
+2020-10-16 15:39:15.746179: I tensorflow/core/profiler/internal/gpu/cupti_tracer.cc:1391] Profiler found 2 GPUs
+2020-10-16 15:39:15.748186: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'cupti64_101.dll'; dlerror: cupti64_101.dll not found
+2020-10-16 15:39:15.749599: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'cupti.dll'; dlerror: cupti.dll not found
+2020-10-16 15:39:15.749704: E tensorflow/core/profiler/internal/gpu/cupti_tracer.cc:1441] function cupti_interface_->Subscribe( &subscriber_, (CUpti_CallbackFunc)ApiCallback, this)failed with error CUPTI could not be loaded or symbol could not be found.
+2020-10-16 15:39:18.930210: I tensorflow/core/profiler/internal/gpu/device_tracer.cc:223]  GpuTracer has collected 0 callback api events and 0 activity events.
+2020-10-16 15:39:18.973532: I tensorflow/core/profiler/rpc/client/save_profile.cc:176] Creating directory: C:\project_data\interiors_2\train_logs\jash's coco config20201016T1443\plugins\profile\2020_10_16_19_39_18
+2020-10-16 15:39:18.977072: I tensorflow/core/profiler/rpc/client/save_profile.cc:182] Dumped gzipped tool data for trace.json.gz to C:\project_data\interiors_2\train_logs\jash's coco config20201016T1443\plugins\profile\2020_10_16_19_39_18\JASH1.trace.json.gz
+2020-10-16 15:39:19.129407: I tensorflow/core/profiler/rpc/client/save_profile.cc:176] Creating directory: C:\project_data\interiors_2\train_logs\jash's coco config20201016T1443\plugins\profile\2020_10_16_19_39_18
+2020-10-16 15:39:19.150461: I tensorflow/core/profiler/rpc/client/save_profile.cc:182] Dumped gzipped tool data for memory_profile.json.gz to C:\project_data\interiors_2\train_logs\jash's coco config20201016T1443\plugins\profile\2020_10_16_19_39_18\JASH1.memory_profile.json.gz
+2020-10-16 15:39:19.159514: I tensorflow/python/profiler/internal/profiler_wrapper.cc:111] Creating directory: C:\project_data\interiors_2\train_logs\jash's coco config20201016T1443\plugins\profile\2020_10_16_19_39_18Dumped tool data for xplane.pb to C:\project_data\interiors_2\train_logs\jash's coco config20201016T1443\plugins\profile\2020_10_16_19_39_18\JASH1.xplane.pb
+Dumped tool data for overview_page.pb to C:\project_data\interiors_2\train_logs\jash's coco config20201016T1443\plugins\profile\2020_10_16_19_39_18\JASH1.overview_page.pb
+Dumped tool data for input_pipeline.pb to C:\project_data\interiors_2\train_logs\jash's coco config20201016T1443\plugins\profile\2020_10_16_19_39_18\JASH1.input_pipeline.pb
+Dumped tool data for tensorflow_stats.pb to C:\project_data\interiors_2\train_logs\jash's coco config20201016T1443\plugins\profile\2020_10_16_19_39_18\JASH1.tensorflow_stats.pb
+Dumped tool data for kernel_stats.pb to C:\project_data\interiors_2\train_logs\jash's coco config20201016T1443\plugins\profile\2020_10_16_19_39_18\JASH1.kernel_stats.pb
+
+  24/1000 [..............................] - ETA: 431:24:13 - batch: 11.5000 - size: 4.0000 - loss: 8.9102 - rpn_class_loss: 1.5279 - rpn_bbox_loss: 2.6072 - mrcnn_class_loss: 0.9226 - mrcnn_bbox_loss: 3.1826 - mrcnn_mask_loss: 0.6699
